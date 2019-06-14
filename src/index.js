@@ -75,8 +75,14 @@ s.g(t2, front2);
 
 s.g(front2, t3);
 
+var arrow = s
+  .polygon([0, 10, 4, 10, 2, 0, 0, 10])
+  .attr({ fill: "rgba(255, 255, 255, 0.8)" })
+  .transform("r90");
+var marker = arrow.marker(0, 0, 10, 10, 0, 5);
+
 var p1 = s.line(392, 135, 490, 40);
-var p2 = s.line(690, 308, 795, 205);
+var p2 = s.line(690, 308, 790, 205);
 var p4 = s.line(392, 145, 395, 495);
 var p5 = s.line(95, 311, 680, 310);
 
@@ -85,6 +91,7 @@ p1.attr({
   "stroke-width": 2,
   "stroke-dasharray": [1, 10],
   "stroke-linecap": "round",
+  markerEnd: marker,
   opacity: 0
 });
 
@@ -93,6 +100,7 @@ p2.attr({
   "stroke-width": 2,
   "stroke-dasharray": [1, 10],
   "stroke-linecap": "round",
+  markerEnd: marker,
   opacity: 0
 });
 
@@ -116,7 +124,8 @@ yAxis.attr({
   stroke: "rgba(170, 177, 182, 0.5)",
   "stroke-width": 2,
   "stroke-dasharray": [1, 10],
-  "stroke-linecap": "round"
+  "stroke-linecap": "round",
+  markerEnd: marker
 });
 
 var xAxis = s.line(85, 500, 680, 500);
@@ -125,7 +134,8 @@ xAxis.attr({
   stroke: "rgba(170, 177, 182, 0.5)",
   "stroke-width": 2,
   "stroke-dasharray": [1, 10],
-  "stroke-linecap": "round"
+  "stroke-linecap": "round",
+  markerEnd: marker
 });
 
 front2.animate({ opacity: 0.8, x: 503, y: 30 }, 1000);
