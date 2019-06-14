@@ -71,9 +71,9 @@ front2.attr({
   strokeWidth: 0
 });
 
-var group1 = s.g(t2, front2);
+s.g(t2, front2);
 
-var group2 = s.g(front2, t3);
+s.g(front2, t3);
 
 var p1 = s.line(392, 135, 490, 40);
 var p2 = s.line(690, 308, 795, 205);
@@ -104,6 +104,24 @@ p4.attr({
 });
 
 p5.attr({
+  stroke: "rgba(170, 177, 182, 0.5)",
+  "stroke-width": 2,
+  "stroke-dasharray": [1, 10],
+  "stroke-linecap": "round"
+});
+
+var yAxis = s.line(85, 500, 85, 140);
+
+yAxis.attr({
+  stroke: "rgba(170, 177, 182, 0.5)",
+  "stroke-width": 2,
+  "stroke-dasharray": [1, 10],
+  "stroke-linecap": "round"
+});
+
+var xAxis = s.line(85, 500, 680, 500);
+
+xAxis.attr({
   stroke: "rgba(170, 177, 182, 0.5)",
   "stroke-width": 2,
   "stroke-dasharray": [1, 10],
