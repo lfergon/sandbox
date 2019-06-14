@@ -138,6 +138,24 @@ xAxis.attr({
   markerEnd: marker
 });
 
+var textYaxis = s.text(0, 140, "IMPACT ON SHELF");
+
+textYaxis.attr({
+  fill: "rgba(255, 255, 255, 0.8)",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "font-size": 10,
+  opacity: 1
+});
+
+var textYaxisSecond = s.text(0, 154, "Energy");
+
+textYaxisSecond.attr({
+  fill: "rgba(255, 255, 255, 0.8)",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "font-size": 10,
+  opacity: 1
+});
+
 front2.animate({ opacity: 0.8, x: 503, y: 30 }, 1000);
 p1.animate({ opacity: 1 }, 1000);
 p2.animate({ opacity: 1 }, 1000);
