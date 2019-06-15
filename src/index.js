@@ -185,6 +185,28 @@ textXaxisFirst.attr({
 
 textXaxisFirst.transform("r90");
 
+var textXaxisSecond = s.text(640, 540, "Energy giver");
+
+textXaxisSecond.attr({
+  fill: "rgba(255, 255, 255, 0.8)",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "font-size": 10,
+  opacity: 1
+});
+
+textXaxisSecond.transform("r90");
+
+var textTime = s.text(730, 270, "TIME");
+
+textTime.attr({
+  fill: "rgba(255, 255, 255, 0.8)",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "font-size": 18,
+  opacity: 1
+});
+
+textTime.transform("r-45");
+
 front2.animate({ opacity: 0.8, x: 503, y: 30 }, 1000);
 p1.animate({ opacity: 1 }, 1000);
 p2.animate({ opacity: 1 }, 1000);
