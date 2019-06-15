@@ -174,28 +174,87 @@ textYaxisFourth.attr({
   opacity: 1
 });
 
-var textXaxisFirst = s.text(625, 570, "IMPACT ON OTHERS");
+var textYaxisFive = s.text(0, 186, "Fulfillment");
 
-textXaxisFirst.attr({
-  fill: "rgba(255, 255, 255, 0.8)",
-  "font-family": "Arial, Helvetica, sans-serif",
-  "font-size": 12,
-  opacity: 1
-});
-
-textXaxisFirst.transform("r90");
-
-var textXaxisSecond = s.text(640, 540, "Energy giver");
-
-textXaxisSecond.attr({
+textYaxisFive.attr({
   fill: "rgba(255, 255, 255, 0.8)",
   "font-family": "Arial, Helvetica, sans-serif",
   "font-size": 10,
   opacity: 1
 });
 
-textXaxisSecond.transform("r90");
+var textYaxisSix = s.text(0, 196, "Growth");
 
+textYaxisSix.attr({
+  fill: "rgba(255, 255, 255, 0.8)",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "font-size": 10,
+  opacity: 1
+});
+
+var textYaxisSeven = s.text(0, 206, "Fun");
+
+textYaxisSeven.attr({
+  fill: "rgba(255, 255, 255, 0.8)",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "font-size": 10,
+  opacity: 1
+});
+
+var textYaxisEight = s.text(0, 216, "Mental Agility");
+
+textYaxisEight.attr({
+  fill: "rgba(255, 255, 255, 0.8)",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "font-size": 10,
+  opacity: 1
+});
+
+var textXaxisFirst = s.text(625, 570, "IMPACT ON OTHERS");
+
+textXaxisFirst
+  .attr({
+    fill: "rgba(255, 255, 255, 0.8)",
+    "font-family": "Arial, Helvetica, sans-serif",
+    "font-size": 12,
+    opacity: 1
+  })
+  .transform("r90");
+
+var textXaxisSecond = s.text(640, 540, "Energy giver");
+
+textXaxisSecond
+  .attr({
+    fill: "rgba(255, 255, 255, 0.8)",
+    "font-family": "Arial, Helvetica, sans-serif",
+    "font-size": 10,
+    opacity: 1
+  })
+  .transform("r90");
+
+var textXaxisThree = s.text(630, 540, "Collaborator");
+
+textXaxisThree
+  .attr({
+    fill: "rgba(255, 255, 255, 0.8)",
+    "font-family": "Arial, Helvetica, sans-serif",
+    "font-size": 10,
+    opacity: 1
+  })
+  .transform("r90");
+
+var textXaxisFour = s.text(618, 542, "Inspire others");
+
+textXaxisFour
+  .attr({
+    fill: "rgba(255, 255, 255, 0.8)",
+    "font-family": "Arial, Helvetica, sans-serif",
+    "font-size": 10,
+    opacity: 1
+  })
+  .transform("r90");
+
+// TIME text
 var textTime = s.text(730, 270, "TIME");
 
 textTime.attr({
