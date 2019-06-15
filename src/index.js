@@ -217,9 +217,10 @@ textXaxisFirst
     fill: "rgba(255, 255, 255, 0.8)",
     "font-family": "Arial, Helvetica, sans-serif",
     "font-size": 12,
-    opacity: 1
+    opacity: 0
   })
-  .transform("r90");
+  .transform("r90")
+  .animate({ opacity: 1 }, 1000);
 
 var textXaxisSecond = s.text(640, 540, "Energy giver");
 
@@ -228,9 +229,10 @@ textXaxisSecond
     fill: "rgba(255, 255, 255, 0.8)",
     "font-family": "Arial, Helvetica, sans-serif",
     "font-size": 10,
-    opacity: 1
+    opacity: 0
   })
-  .transform("r90");
+  .transform("r90")
+  .animate({ opacity: 1 }, 1050);
 
 var textXaxisThree = s.text(630, 540, "Collaborator");
 
@@ -239,9 +241,10 @@ textXaxisThree
     fill: "rgba(255, 255, 255, 0.8)",
     "font-family": "Arial, Helvetica, sans-serif",
     "font-size": 10,
-    opacity: 1
+    opacity: 0
   })
-  .transform("r90");
+  .transform("r90")
+  .animate({ opacity: 1 }, 1100);
 
 var textXaxisFour = s.text(618, 542, "Inspire others");
 
@@ -250,23 +253,26 @@ textXaxisFour
     fill: "rgba(255, 255, 255, 0.8)",
     "font-family": "Arial, Helvetica, sans-serif",
     "font-size": 10,
-    opacity: 1
+    opacity: 0
   })
-  .transform("r90");
+  .transform("r90")
+  .animate({ opacity: 1 }, 1125);
 
 // TIME text
 var textTime = s.text(730, 270, "TIME");
 
-textTime.attr({
-  fill: "rgba(255, 255, 255, 0.8)",
-  "font-family": "Arial, Helvetica, sans-serif",
-  "font-size": 18,
-  opacity: 1
-});
+textTime
+  .attr({
+    fill: "rgba(255, 255, 255, 0.8)",
+    "font-family": "Arial, Helvetica, sans-serif",
+    "font-size": 18,
+    opacity: 0
+  })
+  .transform("r-45")
+  .animate({ opacity: 1 }, 1000);
 
-textTime.transform("r-45");
-
-front2.animate({ opacity: 0.8, x: 503, y: 30 }, 1000);
-p1.animate({ opacity: 1 }, 1000);
-p2.animate({ opacity: 1 }, 1000);
-t3.animate({ x: 540, y: 115, opacity: 1 }, 1000);
+// ANIMATIONS
+front2.animate({ opacity: 0.8, x: 503, y: 30 }, 1500);
+p1.animate({ opacity: 1 }, 1500);
+p2.animate({ opacity: 1 }, 1500);
+t3.animate({ x: 540, y: 115, opacity: 1 }, 1500);
