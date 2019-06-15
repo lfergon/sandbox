@@ -156,6 +156,35 @@ textYaxisSecond.attr({
   opacity: 1
 });
 
+var textYaxisThird = s.text(0, 166, "Resilience");
+
+textYaxisThird.attr({
+  fill: "rgba(255, 255, 255, 0.8)",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "font-size": 10,
+  opacity: 1
+});
+
+var textYaxisFourth = s.text(0, 176, "Stamina");
+
+textYaxisFourth.attr({
+  fill: "rgba(255, 255, 255, 0.8)",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "font-size": 10,
+  opacity: 1
+});
+
+var textXaxisFirst = s.text(625, 570, "IMPACT ON OTHERS");
+
+textXaxisFirst.attr({
+  fill: "rgba(255, 255, 255, 0.8)",
+  "font-family": "Arial, Helvetica, sans-serif",
+  "font-size": 12,
+  opacity: 1
+});
+
+textXaxisFirst.transform("r90");
+
 front2.animate({ opacity: 0.8, x: 503, y: 30 }, 1000);
 p1.animate({ opacity: 1 }, 1000);
 p2.animate({ opacity: 1 }, 1000);
