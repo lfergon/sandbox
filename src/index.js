@@ -84,7 +84,8 @@ var arrow = s
 var marker = arrow.marker(0, 0, 10, 10, 0, 5);
 
 var p1 = s.line(392, 135, 500, 40);
-var lineTimeWithArrow = s.line(690, 300, 790, 205);
+var lineTimeWithArrow = s.line(690, 305, 782, 210);
+
 var p4 = s.line(392, 145, 395, 495);
 var p5 = s.line(95, 311, 680, 310);
 
