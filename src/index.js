@@ -258,6 +258,54 @@ textXaxisFour
   .transform("r90")
   .animate({ opacity: 1 }, 1125);
 
+var textXaxisFive = s.text(602, 548, "Culture changer");
+
+textXaxisFive
+  .attr({
+    fill: "rgba(255, 255, 255, 0.8)",
+    "font-family": "Arial, Helvetica, sans-serif",
+    "font-size": 10,
+    opacity: 0
+  })
+  .transform("r90")
+  .animate({ opacity: 1 }, 1125);
+
+var textXaxisSix = s.text(602, 538, "Role model");
+
+textXaxisSix
+  .attr({
+    fill: "rgba(255, 255, 255, 0.8)",
+    "font-family": "Arial, Helvetica, sans-serif",
+    "font-size": 10,
+    opacity: 0
+  })
+  .transform("r90")
+  .animate({ opacity: 1 }, 1125);
+
+var textXaxisSeven = s.text(585, 546, "Develop others");
+
+textXaxisSeven
+  .attr({
+    fill: "rgba(255, 255, 255, 0.8)",
+    "font-family": "Arial, Helvetica, sans-serif",
+    "font-size": 10,
+    opacity: 0
+  })
+  .transform("r90")
+  .animate({ opacity: 1 }, 1125);
+
+var textXaxisEight = s.text(590, 530, "Winning");
+
+textXaxisEight
+  .attr({
+    fill: "rgba(255, 255, 255, 0.8)",
+    "font-family": "Arial, Helvetica, sans-serif",
+    "font-size": 10,
+    opacity: 0
+  })
+  .transform("r90")
+  .animate({ opacity: 1 }, 1125);
+
 // TIME text
 var textTime = s.text(730, 270, "TIME");
 
