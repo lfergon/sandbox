@@ -3,9 +3,11 @@ import Snap from "snapsvg";
 var s = Snap("#app");
 
 var container = s.rect(90, 140, 595, 355);
-var back1 = s.rect(100, 150, 280, 150);
+
+var sustainableLowInner = s.rect(100, 150, 280, 150);
 var back2 = s.rect(403, 150, 280, 150);
-var back3 = s.rect(100, 320, 280, 150);
+
+var emptyRectangle = s.rect(100, 320, 280, 150);
 var back4 = s.rect(403, 320, 280, 150);
 // var front2 = s.rect(503, 70, 280, 150);
 var front2 = s.rect(395, 140, 290, 170);
@@ -14,7 +16,7 @@ container.attr({
   fill: "#344351"
 });
 
-back1.attr({
+sustainableLowInner.attr({
   fill: "#344351",
   stroke: "#838d95",
   strokeWidth: 5
@@ -24,7 +26,7 @@ back2.attr({
   fill: "#344351"
 });
 
-back3.attr({
+emptyRectangle.attr({
   fill: "#344351"
 });
 
@@ -40,9 +42,9 @@ t1.attr({
   "font-size": 14
 });
 
-var t2 = s.text(425, 225, "SUSTAINABLE HIGH PERFORMER");
+var textHighPerformer = s.text(425, 225, "SUSTAINABLE HIGH PERFORMER");
 
-t2.attr({
+textHighPerformer.attr({
   fill: "rgba(255, 255, 255, 0.8)",
   "font-family": "Arial, Helvetica, sans-serif",
   "font-size": 14
@@ -71,7 +73,7 @@ front2.attr({
   strokeWidth: 0
 });
 
-s.g(t2, front2);
+s.g(textHighPerformer, front2);
 
 s.g(front2, t3);
 
@@ -81,8 +83,8 @@ var arrow = s
   .transform("r90");
 var marker = arrow.marker(0, 0, 10, 10, 0, 5);
 
-var p1 = s.line(392, 135, 490, 40);
-var p2 = s.line(690, 308, 790, 205);
+var p1 = s.line(392, 135, 500, 40);
+var lineTimeWithArrow = s.line(690, 300, 790, 205);
 var p4 = s.line(392, 145, 395, 495);
 var p5 = s.line(95, 311, 680, 310);
 
@@ -91,11 +93,33 @@ p1.attr({
   "stroke-width": 2,
   "stroke-dasharray": [1, 10],
   "stroke-linecap": "round",
-  markerEnd: marker,
+  //markerEnd: marker,
   opacity: 0
 });
 
-p2.attr({
+var lineToJoinFirst = s.line(400, 305, 505, 195);
+
+lineToJoinFirst.attr({
+  stroke: "rgba(170, 177, 182, 0.4)",
+  "stroke-width": 2,
+  "stroke-dasharray": [1, 10],
+  "stroke-linecap": "round",
+  //markerEnd: marker,
+  opacity: 0.4
+});
+
+var lineToJoinSecond = s.line(685, 140, 790, 35);
+
+lineToJoinSecond.attr({
+  stroke: "rgba(170, 177, 182, 0.4)",
+  "stroke-width": 2,
+  "stroke-dasharray": [1, 10],
+  "stroke-linecap": "round",
+  //markerEnd: marker,
+  opacity: 0.4
+});
+
+lineTimeWithArrow.attr({
   stroke: "rgba(170, 177, 182, 0.7)",
   "stroke-width": 2,
   "stroke-dasharray": [1, 10],
@@ -143,8 +167,8 @@ var textYaxis = s.text(0, 140, "IMPACT ON SHELF");
 textYaxis.attr({
   fill: "rgba(255, 255, 255, 0.8)",
   "font-family": "Arial, Helvetica, sans-serif",
-  "font-size": 10,
-  opacity: 1
+  "font-size": 9,
+  opacity: 0
 });
 
 var textYaxisSecond = s.text(0, 154, "Energy");
@@ -152,8 +176,8 @@ var textYaxisSecond = s.text(0, 154, "Energy");
 textYaxisSecond.attr({
   fill: "rgba(255, 255, 255, 0.8)",
   "font-family": "Arial, Helvetica, sans-serif",
-  "font-size": 10,
-  opacity: 1
+  "font-size": 8,
+  opacity: 0
 });
 
 var textYaxisThird = s.text(0, 166, "Resilience");
@@ -161,7 +185,7 @@ var textYaxisThird = s.text(0, 166, "Resilience");
 textYaxisThird.attr({
   fill: "rgba(255, 255, 255, 0.8)",
   "font-family": "Arial, Helvetica, sans-serif",
-  "font-size": 10,
+  "font-size": 8,
   opacity: 1
 });
 
@@ -170,7 +194,7 @@ var textYaxisFourth = s.text(0, 176, "Stamina");
 textYaxisFourth.attr({
   fill: "rgba(255, 255, 255, 0.8)",
   "font-family": "Arial, Helvetica, sans-serif",
-  "font-size": 10,
+  "font-size": 8,
   opacity: 1
 });
 
@@ -179,7 +203,7 @@ var textYaxisFive = s.text(0, 186, "Fulfillment");
 textYaxisFive.attr({
   fill: "rgba(255, 255, 255, 0.8)",
   "font-family": "Arial, Helvetica, sans-serif",
-  "font-size": 10,
+  "font-size": 8,
   opacity: 1
 });
 
@@ -188,7 +212,7 @@ var textYaxisSix = s.text(0, 196, "Growth");
 textYaxisSix.attr({
   fill: "rgba(255, 255, 255, 0.8)",
   "font-family": "Arial, Helvetica, sans-serif",
-  "font-size": 10,
+  "font-size": 8,
   opacity: 1
 });
 
@@ -197,7 +221,7 @@ var textYaxisSeven = s.text(0, 206, "Fun");
 textYaxisSeven.attr({
   fill: "rgba(255, 255, 255, 0.8)",
   "font-family": "Arial, Helvetica, sans-serif",
-  "font-size": 10,
+  "font-size": 8,
   opacity: 1
 });
 
@@ -206,10 +230,11 @@ var textYaxisEight = s.text(0, 216, "Mental Agility");
 textYaxisEight.attr({
   fill: "rgba(255, 255, 255, 0.8)",
   "font-family": "Arial, Helvetica, sans-serif",
-  "font-size": 10,
+  "font-size": 8,
   opacity: 1
 });
 
+// Horizontal section of text
 var textXaxisFirst = s.text(625, 570, "IMPACT ON OTHERS");
 
 textXaxisFirst
@@ -319,9 +344,19 @@ textTime
   .transform("r-45");
 
 // ANIMATIONS
+
+animateYAxisText();
 front2.animate({ opacity: 0.8, x: 503, y: 30 }, 2000, animateTextImpacter);
 p1.animate({ opacity: 1 }, 2000);
-p2.animate({ opacity: 1 }, 2000);
+lineTimeWithArrow.animate({ opacity: 1 }, 2000);
+
+function animateYAxisText() {
+  textYaxis.animate({ opacity: 1 }, 1000, animateSecondY);
+}
+
+function animateSecondY() {
+  textYaxisSecond.animate({ opacity: 1 }, 1000);
+}
 
 function animateTextImpacter() {
   t3.animate({ x: 540, y: 115, opacity: 1 }, 3000, animateTextTime);
