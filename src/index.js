@@ -316,11 +316,47 @@ textTime
     "font-size": 18,
     opacity: 0
   })
-  .transform("r-45")
-  .animate({ opacity: 1 }, 1000);
+  .transform("r-45");
 
 // ANIMATIONS
-front2.animate({ opacity: 0.8, x: 503, y: 30 }, 1500);
-p1.animate({ opacity: 1 }, 1500);
-p2.animate({ opacity: 1 }, 1500);
-t3.animate({ x: 540, y: 115, opacity: 1 }, 1500);
+front2.animate({ opacity: 0.8, x: 503, y: 30 }, 2000, animateTextImpacter);
+p1.animate({ opacity: 1 }, 2000);
+p2.animate({ opacity: 1 }, 2000);
+
+function animateTextImpacter() {
+  t3.animate({ x: 540, y: 115, opacity: 1 }, 3000, animateTextTime);
+}
+
+function animateTextTime() {
+  textTime.animate({ opacity: 1 }, 1000);
+}
+
+// var vBW = 1200; // viewBoxWidth
+// var vBH = 1500; // viewBoxHeight
+
+// // Draw a rounded square.
+// // Paper.rect(x, y, width, height, [rx], [ry])
+// var rect1 = s.rect(10, vBH / 2 - 50, 100, 100);
+
+// rect1.attr({
+//   fill: "#162838",
+//   stroke: "white",
+//   strokeWidth: 2
+// });
+
+// // Element.animate(attrs, duration, [easing], [callback])
+// //  We are skipping easing for now and just using a simple attribute
+// // and a callback.
+
+// function animate1() {
+//   rect1.animate({ x: vBW - 110 }, 4000, animate2);
+// }
+
+// // Notice the return animation is faster.
+
+// function animate2() {
+//   rect1.animate({ x: 10 }, 2000, animate1);
+// }
+
+// // Kick things off
+// animate1();
