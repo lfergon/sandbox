@@ -16,11 +16,14 @@ container.attr({
   fill: "#344351"
 });
 
-sustainableLowInner.attr({
-  fill: "#344351",
-  stroke: "#838d95",
-  strokeWidth: 5
-});
+sustainableLowInner
+  .attr({
+    fill: "#344351",
+    stroke: "#838d95",
+    strokeWidth: 5,
+    opacity: 0
+  })
+  .animate({ opacity: 1 }, 5000);
 
 back2.attr({
   fill: "#344351"
@@ -34,37 +37,40 @@ back4.attr({
   fill: "#344351"
 });
 
-var t1 = s.text(125, 225, "SUSTAINABLE LOW PERFORMER");
+var t1 = s.text(141, 225, "SUSTAINABLE LOW PERFORMER");
 
 t1.attr({
   fill: "rgba(255, 255, 255, 0.8)",
-  "font-family": "Arial, Helvetica, sans-serif",
-  "font-size": 14
-});
-
-var textHighPerformer = s.text(425, 225, "SUSTAINABLE HIGH PERFORMER");
-
-textHighPerformer.attr({
-  fill: "rgba(255, 255, 255, 0.8)",
-  "font-family": "Arial, Helvetica, sans-serif",
-  "font-size": 14
-});
-
-var t3 = s.text(425, 225, "SUSTAINABLE HIGH IMPACTER");
-
-t3.attr({
-  fill: "rgba(255, 255, 255, 0.8)",
-  "font-family": "Arial, Helvetica, sans-serif",
+  "font-family": "Apercu, sans-serif",
   "font-size": 14,
   opacity: 0
 });
+
+var t2 = s.text(438, 225, "SUSTAINABLE HIGH PERFORMER");
+
+t2.attr({
+  fill: "rgba(255, 255, 255, 0.8)",
+  "font-family": "Apercu, sans-serif",
+  "font-size": 14,
+  opacity: 0
+});
+
+var t3 = s.text(438, 225, "SUSTAINABLE HIGH IMPACTER");
+
+t3.attr({
+  fill: "rgba(255, 255, 255, 0.8)",
+  "font-family": "Apercu, sans-serif",
+  "font-size": 14,
+  opacity: 0
+}).animate({ opacity: 0 }, 10000);
 
 var t4 = s.text(460, 405, "UNSUSTAINABLE GIVER");
 
 t4.attr({
   fill: "rgba(255, 255, 255, 0.8)",
-  "font-family": "Arial, Helvetica, sans-serif",
-  "font-size": 14
+  "font-family": "Apercu, sans-serif",
+  "font-size": 14,
+  opacity: 0
 });
 
 front2.attr({
@@ -73,7 +79,7 @@ front2.attr({
   strokeWidth: 0
 });
 
-s.g(textHighPerformer, front2);
+s.g(t2, front2);
 
 s.g(front2, t3);
 
@@ -163,174 +169,166 @@ xAxis.attr({
   markerEnd: marker
 });
 
-var textYaxis = s.text(0, 140, "IMPACT ON SHELF");
+var textYaxis = s.text(0, 140, "IMPACT ON SELF");
 
 textYaxis.attr({
   fill: "rgba(255, 255, 255, 0.8)",
-  "font-family": "Arial, Helvetica, sans-serif",
+  "font-family": "Apercu, sans-serif",
   "font-size": 9,
   opacity: 0
 });
 
-var textYaxisSecond = s.text(0, 154, "Energy");
+var textYaxisSecond = s.text(42, 154, "Energy");
 
 textYaxisSecond.attr({
   fill: "rgba(255, 255, 255, 0.8)",
-  "font-family": "Arial, Helvetica, sans-serif",
+  "font-family": "Apercu, sans-serif",
   "font-size": 8,
   opacity: 0
 });
 
-var textYaxisThird = s.text(0, 166, "Resilience");
+var textYaxisThird = s.text(31, 166, "Resilience");
 
 textYaxisThird.attr({
   fill: "rgba(255, 255, 255, 0.8)",
-  "font-family": "Arial, Helvetica, sans-serif",
+  "font-family": "Apercu, sans-serif",
   "font-size": 8,
-  opacity: 1
+  opacity: 0
 });
 
-var textYaxisFourth = s.text(0, 176, "Stamina");
+var textYaxisFourth = s.text(38, 179, "Stamina");
 
 textYaxisFourth.attr({
   fill: "rgba(255, 255, 255, 0.8)",
-  "font-family": "Arial, Helvetica, sans-serif",
+  "font-family": "Apercu, sans-serif",
   "font-size": 8,
-  opacity: 1
+  opacity: 0
 });
 
-var textYaxisFive = s.text(0, 186, "Fulfillment");
+var textYaxisFive = s.text(30, 192, "Fulfilment");
 
 textYaxisFive.attr({
   fill: "rgba(255, 255, 255, 0.8)",
-  "font-family": "Arial, Helvetica, sans-serif",
+  "font-family": "Apercu, sans-serif",
   "font-size": 8,
-  opacity: 1
+  opacity: 0
 });
 
-var textYaxisSix = s.text(0, 196, "Growth");
+var textYaxisSix = s.text(40, 204, "Growth");
 
 textYaxisSix.attr({
   fill: "rgba(255, 255, 255, 0.8)",
-  "font-family": "Arial, Helvetica, sans-serif",
+  "font-family": "Apercu, sans-serif",
   "font-size": 8,
-  opacity: 1
+  opacity: 0
 });
 
-var textYaxisSeven = s.text(0, 206, "Fun");
+var textYaxisSeven = s.text(52, 216, "Fun");
 
 textYaxisSeven.attr({
   fill: "rgba(255, 255, 255, 0.8)",
-  "font-family": "Arial, Helvetica, sans-serif",
+  "font-family": "Apercu, sans-serif",
   "font-size": 8,
-  opacity: 1
+  opacity: 0
 });
 
-var textYaxisEight = s.text(0, 216, "Mental Agility");
+var textYaxisEight = s.text(19, 228, "Mental Agility");
 
 textYaxisEight.attr({
   fill: "rgba(255, 255, 255, 0.8)",
-  "font-family": "Arial, Helvetica, sans-serif",
+  "font-family": "Apercu, sans-serif",
   "font-size": 8,
-  opacity: 1
+  opacity: 0
 });
 
 // Horizontal section of text
-var textXaxisFirst = s.text(625, 570, "IMPACT ON OTHERS");
+var textXaxisFirst = s.text(635, 560, "IMPACT ON OTHERS");
 
 textXaxisFirst
   .attr({
     fill: "rgba(255, 255, 255, 0.8)",
-    "font-family": "Arial, Helvetica, sans-serif",
-    "font-size": 12,
+    "font-family": "Apercu, sans-serif",
+    "font-size": 9,
     opacity: 0
   })
-  .transform("r90")
-  .animate({ opacity: 1 }, 1000);
+  .transform("r90");
 
-var textXaxisSecond = s.text(640, 540, "Energy giver");
+var textXaxisSecond = s.text(638, 541, "Energy giver");
 
 textXaxisSecond
   .attr({
     fill: "rgba(255, 255, 255, 0.8)",
-    "font-family": "Arial, Helvetica, sans-serif",
-    "font-size": 10,
+    "font-family": "Apercu, sans-serif",
+    "font-size": 8,
     opacity: 0
   })
-  .transform("r90")
-  .animate({ opacity: 1 }, 1050);
+  .transform("r90");
 
-var textXaxisThree = s.text(630, 540, "Collaborator");
+var textXaxisThree = s.text(625, 542, "Collaborator");
 
 textXaxisThree
   .attr({
     fill: "rgba(255, 255, 255, 0.8)",
-    "font-family": "Arial, Helvetica, sans-serif",
-    "font-size": 10,
+    "font-family": "Apercu, sans-serif",
+    "font-size": 8,
     opacity: 0
   })
-  .transform("r90")
-  .animate({ opacity: 1 }, 1100);
+  .transform("r90");
 
-var textXaxisFour = s.text(618, 542, "Inspire others");
+var textXaxisFour = s.text(612, 544, "Inspire others");
 
 textXaxisFour
   .attr({
     fill: "rgba(255, 255, 255, 0.8)",
-    "font-family": "Arial, Helvetica, sans-serif",
-    "font-size": 10,
+    "font-family": "Apercu, sans-serif",
+    "font-size": 8,
     opacity: 0
   })
-  .transform("r90")
-  .animate({ opacity: 1 }, 1125);
+  .transform("r90");
 
-var textXaxisFive = s.text(602, 548, "Culture changer");
+var textXaxisFive = s.text(596, 548, "Culture changer");
 
 textXaxisFive
   .attr({
     fill: "rgba(255, 255, 255, 0.8)",
-    "font-family": "Arial, Helvetica, sans-serif",
-    "font-size": 10,
+    "font-family": "Apercu, sans-serif",
+    "font-size": 8,
     opacity: 0
   })
-  .transform("r90")
-  .animate({ opacity: 1 }, 1125);
+  .transform("r90");
 
-var textXaxisSix = s.text(602, 538, "Role model");
+var textXaxisSix = s.text(592, 540, "Role model");
 
 textXaxisSix
   .attr({
     fill: "rgba(255, 255, 255, 0.8)",
-    "font-family": "Arial, Helvetica, sans-serif",
-    "font-size": 10,
+    "font-family": "Apercu, sans-serif",
+    "font-size": 8,
     opacity: 0
   })
-  .transform("r90")
-  .animate({ opacity: 1 }, 1125);
+  .transform("r90");
 
-var textXaxisSeven = s.text(585, 546, "Develop others");
+var textXaxisSeven = s.text(573, 547, "Develop others");
 
 textXaxisSeven
   .attr({
     fill: "rgba(255, 255, 255, 0.8)",
-    "font-family": "Arial, Helvetica, sans-serif",
-    "font-size": 10,
+    "font-family": "Apercu, sans-serif",
+    "font-size": 8,
     opacity: 0
   })
-  .transform("r90")
-  .animate({ opacity: 1 }, 1125);
+  .transform("r90");
 
-var textXaxisEight = s.text(590, 530, "Winning");
+var textXaxisEight = s.text(573, 534, "Winning");
 
 textXaxisEight
   .attr({
     fill: "rgba(255, 255, 255, 0.8)",
-    "font-family": "Arial, Helvetica, sans-serif",
-    "font-size": 10,
+    "font-family": "Apercu, sans-serif",
+    "font-size": 8,
     opacity: 0
   })
-  .transform("r90")
-  .animate({ opacity: 1 }, 1125);
+  .transform("r90");
 
 // TIME text
 var textTime = s.text(730, 270, "TIME");
@@ -338,8 +336,8 @@ var textTime = s.text(730, 270, "TIME");
 textTime
   .attr({
     fill: "rgba(255, 255, 255, 0.8)",
-    "font-family": "Arial, Helvetica, sans-serif",
-    "font-size": 18,
+    "font-family": "Apercu, sans-serif",
+    "font-size": 10,
     opacity: 0
   })
   .transform("r-45");
@@ -347,24 +345,105 @@ textTime
 // ANIMATIONS
 
 animateYAxisText();
-front2.animate({ opacity: 0.8, x: 503, y: 30 }, 2000, animateTextImpacter);
-p1.animate({ opacity: 1 }, 2000);
-lineTimeWithArrow.animate({ opacity: 1 }, 2000);
+animateXAxisText();
 
 function animateYAxisText() {
-  textYaxis.animate({ opacity: 1 }, 1000, animateSecondY);
+  textYaxis.animate({ opacity: 1 }, 800, animateSecondY);
 }
 
 function animateSecondY() {
-  textYaxisSecond.animate({ opacity: 1 }, 1000);
+  textYaxisSecond.animate({ opacity: 1 }, 800, animateThirdY);
+}
+
+function animateThirdY() {
+  textYaxisThird.animate({ opacity: 1 }, 800, animateFourthY);
+}
+
+function animateFourthY() {
+  textYaxisFourth.animate({ opacity: 1 }, 800, animateFifthY);
+}
+
+function animateFifthY() {
+  textYaxisFive.animate({ opacity: 1 }, 800, animateSixthY);
+}
+
+function animateSixthY() {
+  textYaxisSix.animate({ opacity: 1 }, 800, animateSeventhY);
+}
+
+function animateSeventhY() {
+  textYaxisSeven.animate({ opacity: 1 }, 800, animateEighthY);
+}
+
+function animateEighthY() {
+  textYaxisEight.animate({ opacity: 1 }, 800, animateXAxisText);
+}
+
+function animateXAxisText() {
+  textXaxisFirst.animate({ opacity: 1 }, 800, animateSecondX);
+}
+
+function animateSecondX() {
+  textXaxisSecond.animate({ opacity: 1 }, 800, animateThirdX);
+}
+
+function animateThirdX() {
+  textXaxisThree.animate({ opacity: 1 }, 800, animateFourthX);
+}
+
+function animateFourthX() {
+  textXaxisFour.animate({ opacity: 1 }, 800, animateFifthX);
+}
+
+function animateFifthX() {
+  textXaxisFive.animate({ opacity: 1 }, 800, animateSixthX);
+}
+
+function animateSixthX() {
+  textXaxisSix.animate({ opacity: 1 }, 800, animateSeventhX);
+}
+
+function animateSeventhX() {
+  textXaxisSeven.animate({ opacity: 1 }, 800, animateEighthX);
+}
+
+function animateEighthX() {
+  textXaxisEight.animate({ opacity: 1 }, 800, animateLowPerformer);
+}
+
+function animateLowPerformer() {
+  t1.animate({ opacity: 1 }, 800, animateGiver);
+}
+
+function animateGiver() {
+  t4.animate({ opacity: 1 }, 800, animateHighPerformer);
+}
+
+front2.animate({ opacity: 0.8, x: 503, y: 30 }, 5000, animateTextImpacter);
+t3.animate({ opacity: 0, x: 561, y: 112 }, 5000, animateTextImpacter);
+p1.animate({ opacity: 1 }, 8000);
+lineTimeWithArrow.animate({ opacity: 1 }, 8000);
+
+function animateHighPerformer() {
+  t2.animate(
+    { opacity: 1 },
+    800,
+    animateTextImpacter,
+    lineToJoinFirst,
+    lineToJoinSecond,
+    t3
+  );
 }
 
 function animateTextImpacter() {
-  t3.animate({ x: 540, y: 115, opacity: 1 }, 3000, animateTextTime);
+  p1.animate({ opacity: 1 }, 800);
+  lineToJoinFirst.animate({ opacity: 1 }, 800);
+  lineToJoinSecond.animate({ opacity: 1 }, 800, animateTextTime);
 }
 
 function animateTextTime() {
-  textTime.animate({ opacity: 1 }, 1000);
+  textTime.animate({ opacity: 1 }, 8000);
+  t3.animate({ opacity: 1 }, 8000);
 }
 
 // var vBW = 1200; // viewBoxWidth
